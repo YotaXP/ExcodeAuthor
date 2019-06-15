@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\colortbl ;\red128\green0\blue0;\red255\green0\blue0;\red0\green128\blue0;}
+{\*\generator Msftedit 5.41.21.2508;}\viewkind4\uc1\pard\fi-270\li270\b\f0\fs16 (Classic)\b0\fs20\par
+\cf1\b\fs24 Excode \cf0 Reference:\par
+\b0\fs20\par
+\b\bullet  Line breaks\b0 : Excode is a line-based script language.  Each new line represents the end and beginning of a command.  Blank lines are not acceptable when compiling Excode, but the "Copy Clean" and "Copy Extended" commands of this program will strip them.\par
+\par
+\b\bullet  Semicolons\b0 : Parameters are seperated in Excode with semicolons.  They can only be used for this purpose.  You cannot directly enter them into strings.  If you do need a semicolon in a string, you'll have to go about it making use of commands like 'char' and 'replacetext'.\par
+\par
+\b\bullet  Values\b0 : Literal values are identified in Excode as text prefixed with a double-quote. (") Strings and number values are both represented this way.\par
+\par
+\b\bullet  Variables\b0 : Variables can be identified in Excode as anything that doesn't begin with a double-quote. (Exceptions being where labels are expected, as in 'id', 'goto', and 'if'.) Variables can contain any value, including lists.  There are a few built-in variables, such as 'err_level', 'input' (as list), and 'arg', (as list) and finally 'null'.\par
+\par
+\b\bullet  Input\b0 : Input paramiters will accept either variables or direct values.\par
+\par
+\b\bullet  Lists\b0 : Variables can contain lists of values.  The variable must first be initialized with the 'init_list' command.  Reading and writing to the list indicies can be done with the colon (:) operator.  An input is expected after the colon. (Ex: myList:"0 ) Lists in Excode are zero-based, meaning that 0 is their first index.  If something is written to an index that is out of bounds, the list will automatically grow to the necessary length.\par
+\par
+\par
+\b\fs24 Excode Command List:\fs22\par
+\b0\fs20\par
+\b comment\b0 ;anything\line This is your comment command.  You can put anything you want after the semicolon, except a line break which ends the comment.  This command isn't executed when run.  'Copy Clean' and 'Copy Extended' strip these lines from the final code.\par
+\par
+\b shell\b0 ;input\line This command executes script in the form of a text string on the underlying OS.  You can use any command here that you may find in a script file.\par
+\par
+\b id\b0 ;label\line This is a target for flow control commands like 'goto' and 'if'.  Note: The parameter is a label, not a value.  You do not need a double-quote.\par
+\par
+\b goto\b0 ;label\line This command moves the execution to the last 'id' with the given label.  Note: This parameter is also a label.  You cannot use variables to decide where the control flows.  You'll need an 'if' command to decide such a thing.\par
+\par
+\b if\b0 ;input1;operator;input2;label\line This is the only real flow-control statement in classic Excode.  It compares the two input parameters based on the given operator.  If the result is true, control is moved to the last 'id' with the given label.  Note: This parameter is also a label.  You cannot use variables to decide where the control flows.  You'll need an 'if' command to decide such a thing.\line\b Operators\b0 : ==, !=, >=, <=, >, <\par
+\par
+\b set\b0 ;variable;input\line This command sets the value of a variable to the given input.\par
+\par
+\b eval\b0 ;variable;operator;input\line This command preforms a mathmatical operation on the given variable with the input as the second term.\line\b Operators\b0 : +=, -=, *=, /=\par
+\par
+\b init_list\b0 ;variable\line This command assigns a blank list to the variable.\line\cf2\b WARNING\cf0\b0 : This command is glitchy.  The values it returns are not readable by most commands.  You can repair the value by using a command like 'eval' on it. (Ex: eval;variable;+=;"0 )\par
+\par
+\b list_moveup\b0 ;variable\line This command moves all indicies of the given list by one.  Index '0' becomes null.\par
+\par
+\b length\b0 ;variable;input\line This command stores the length of the string or list in the input to the given variable.\par
+\par
+\b char\b0 ;variable;input\line This command assigns the variable to a single-character string with input as the ASCII character code.\par
+\par
+\b findtext\b0 ;variable;input1;input2;input3;input4\line This command put into the variable the location of input1 in input2, between input3 and input4. (As numbers)\par
+\par
+\b replacetext\b0 ;variable;input1;input2;input3\line This command replaces all instances of input2 with input3 in input1, and puts the result in the given variable.\par
+\par
+\b copytext\b0 ;variable;input1;input2;input3\line This extracts a portion of input1 into the given variable, where input2 and input3 are the start and end indicies respectively.\line\cf2\b WARNING\cf0\b0 : This command is glitchy.  It only returns one character no matter the value of input3.\par
+\par
+\b dumpfile\b0 ;input;variable\line This command copies the data of the file located at a path given by input into the given variable.\par
+\par
+\b getfile\b0 ;variable;input \cf3\b (Needs clerification!)\line\cf0\b0 This command assigns a file located at a path given by input to the given variable.\par
+\par
+\b dumppath\b0 ;input;variable \cf3\b (Needs clerification!)\cf0\b0\line This command puts the path of a file given by input into the given variable.\par
+\par
+\b end\b0 ;input\line This command ends the execution of the current program.  The input given is assigned to the built-in 'err_level' variable which can be read from other programs. (Such as a program that has called the recently ended program.)\par
+\par
+\b\fs16 (ExcodeEx)\par
+\cf1\fs24 Extended Excode \cf0 Reference:\par
+\b0\fs20\par
+Differences:\line Classic Excode works with Extended Excode unless it makes use of a reserved name somewhere in its code.  This is not true the other way around.  ExcodeEx is converted into Console-acceptable Excode with the 'Copy Extended' button.  The same operations as 'Copy Clean' are executed as well, so blank lines and commends are removed from the output.  Comments can be represented by double-slashes or single-quotes.  The slashes or quote must be the first non-whitespace character on the line.  This extention also introduces new powerful flow control statements, such as returnable functions and loops.  Labels are renamed internally to prevent accidental (or intentional) entering or exiting of a function or body by 'goto's and 'if's.  Finally, you are free to indent with tabs and spaces as you please, and Excode commands are automatically converted to lowercase. (This is something also covered by 'Copy Clean'.)\par
+\par
+\b\fs24 Extended Command List:\par
+\b0\fs20\par
+\b func\b0 ;method;variables...\line This defines the beginning of a function.  The function name must be unique, and you cannot define a function within another.  The function body is closed with 'endfunc'.  Parameter names can be listed after the method name.  Local variables can be defined by prefixing them with a '#' symbol.  All parameters are local, and the '#' prefix will be added automatically if missing. (If for some reason a variable in the main program is ambiguous with a local one, the local one will be used.) Local variables are automatically adjusted as flow enters and exits the function.  You don't have to worry about these variables conflicting with others with the same name in other functions.  These may still contain values from the last time the function was running, so be sure to initialize them. (Don't worry about losing the values from earlier up the call stack.  They will return when the stack unwinds.)  If control flows into the beginning of a function, it will jump to the end of the definition.\par
+\par
+\b endfunc\b0\line Defines the end of a function.  Control will return back to the caller once this command is reached.  It cannot be used in the middle of a body, but you can jump it with labels.\par
+\par
+\b call\b0 ;method;inputs...\line This calls a method defined by the 'func' command.  Any number of parameters can be given after the method name.  These will be passed to the method in the 'farg' list.  Control is returned to this point once the function returns.\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
