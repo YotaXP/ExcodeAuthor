@@ -1,4 +1,4 @@
-﻿namespace ExcodeExt
+﻿namespace ExcodeAuthor
 {
     partial class ExcodeForm
     {
@@ -70,7 +70,7 @@
             this.copyScriptName = new System.Windows.Forms.ComboBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.codeGutter = new ExcodeExt.Gutter();
+            this.codeGutter = new ExcodeAuthor.Gutter();
             toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -182,7 +182,7 @@
             // 
             // cutToolStripMenuItem
             // 
-            this.cutToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.cut16;
+            this.cutToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.cut16;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+X";
             this.cutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
@@ -191,7 +191,7 @@
             // 
             // copyToolStripMenuItem
             // 
-            this.copyToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.copy16;
+            this.copyToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.copy16;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+C";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
@@ -200,7 +200,7 @@
             // 
             // pasteToolStripMenuItem
             // 
-            this.pasteToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.paste16;
+            this.pasteToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.paste16;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+V";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
@@ -209,7 +209,7 @@
             // 
             // deleteToolStripMenuItem
             // 
-            this.deleteToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.trash16;
+            this.deleteToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.trash16;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
@@ -272,7 +272,7 @@
             this.newBlankWindowToolStripMenuItem,
             this.newDuplicateWindowToolStripMenuItem,
             this.clearCurrentWindowToolStripMenuItem});
-            this.newWindowToolStripSplitButton.Image = global::ExcodeExt.Properties.Resources.documents16;
+            this.newWindowToolStripSplitButton.Image = global::ExcodeAuthor.Properties.Resources.documents16;
             this.newWindowToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newWindowToolStripSplitButton.Name = "newWindowToolStripSplitButton";
             this.newWindowToolStripSplitButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -282,7 +282,7 @@
             // 
             // newBlankWindowToolStripMenuItem
             // 
-            this.newBlankWindowToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.documents16;
+            this.newBlankWindowToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.documents16;
             this.newBlankWindowToolStripMenuItem.Name = "newBlankWindowToolStripMenuItem";
             this.newBlankWindowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.newBlankWindowToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
@@ -291,7 +291,7 @@
             // 
             // newDuplicateWindowToolStripMenuItem
             // 
-            this.newDuplicateWindowToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.copy16;
+            this.newDuplicateWindowToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.copy16;
             this.newDuplicateWindowToolStripMenuItem.Name = "newDuplicateWindowToolStripMenuItem";
             this.newDuplicateWindowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
                         | System.Windows.Forms.Keys.N)));
@@ -301,7 +301,7 @@
             // 
             // clearCurrentWindowToolStripMenuItem
             // 
-            this.clearCurrentWindowToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.trash16;
+            this.clearCurrentWindowToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.trash16;
             this.clearCurrentWindowToolStripMenuItem.Name = "clearCurrentWindowToolStripMenuItem";
             this.clearCurrentWindowToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.clearCurrentWindowToolStripMenuItem.Text = "Clear Current Window";
@@ -312,7 +312,7 @@
             this.openFileToolStripSplitButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openFileToolStripMenuItem,
             toolStripSeparator1});
-            this.openFileToolStripSplitButton.Image = global::ExcodeExt.Properties.Resources.folderOpen16;
+            this.openFileToolStripSplitButton.Image = global::ExcodeAuthor.Properties.Resources.folderOpen16;
             this.openFileToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openFileToolStripSplitButton.Name = "openFileToolStripSplitButton";
             this.openFileToolStripSplitButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -322,7 +322,7 @@
             // 
             // openFileToolStripMenuItem
             // 
-            this.openFileToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.folderOpen16;
+            this.openFileToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.folderOpen16;
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
             this.openFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.openFileToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
@@ -335,7 +335,7 @@
             this.saveFileToolStripMenuItem,
             this.saveFileAsToolStripMenuItem,
             this.saveCopyAsToolStripMenuItem});
-            this.saveFileToolStripSplitButton.Image = global::ExcodeExt.Properties.Resources.save16;
+            this.saveFileToolStripSplitButton.Image = global::ExcodeAuthor.Properties.Resources.save16;
             this.saveFileToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveFileToolStripSplitButton.Name = "saveFileToolStripSplitButton";
             this.saveFileToolStripSplitButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -380,7 +380,7 @@
             this.findAgainToolStripMenuItem,
             toolStripSeparator4,
             this.goToLineToolStripTextBox});
-            this.findToolStripSplitButton.Image = global::ExcodeExt.Properties.Resources.find;
+            this.findToolStripSplitButton.Image = global::ExcodeAuthor.Properties.Resources.find;
             this.findToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.findToolStripSplitButton.Name = "findToolStripSplitButton";
             this.findToolStripSplitButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -390,7 +390,7 @@
             // 
             // findToolStripMenuItem
             // 
-            this.findToolStripMenuItem.Image = global::ExcodeExt.Properties.Resources.find;
+            this.findToolStripMenuItem.Image = global::ExcodeAuthor.Properties.Resources.find;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.findToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
@@ -420,7 +420,7 @@
             // cutToolStripButton
             // 
             this.cutToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cutToolStripButton.Image = global::ExcodeExt.Properties.Resources.cut16;
+            this.cutToolStripButton.Image = global::ExcodeAuthor.Properties.Resources.cut16;
             this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton.Name = "cutToolStripButton";
             this.cutToolStripButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -431,7 +431,7 @@
             // copyToolStripButton
             // 
             this.copyToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyToolStripButton.Image = global::ExcodeExt.Properties.Resources.copy16;
+            this.copyToolStripButton.Image = global::ExcodeAuthor.Properties.Resources.copy16;
             this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripButton.Name = "copyToolStripButton";
             this.copyToolStripButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -442,7 +442,7 @@
             // pasteToolStripButton
             // 
             this.pasteToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pasteToolStripButton.Image = global::ExcodeExt.Properties.Resources.paste16;
+            this.pasteToolStripButton.Image = global::ExcodeAuthor.Properties.Resources.paste16;
             this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton.Name = "pasteToolStripButton";
             this.pasteToolStripButton.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
@@ -454,7 +454,7 @@
             // 
             this.aboutToolStripButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.aboutToolStripButton.BackColor = System.Drawing.SystemColors.Control;
-            this.aboutToolStripButton.Image = global::ExcodeExt.Properties.Resources.questionMark;
+            this.aboutToolStripButton.Image = global::ExcodeAuthor.Properties.Resources.questionMark;
             this.aboutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.aboutToolStripButton.Name = "aboutToolStripButton";
             this.aboutToolStripButton.Size = new System.Drawing.Size(60, 22);
@@ -467,7 +467,7 @@
             this.updateToolStripButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.updateToolStripButton.Font = new System.Drawing.Font("Segoe UI", 6F);
             this.updateToolStripButton.ForeColor = System.Drawing.Color.Black;
-            this.updateToolStripButton.Image = global::ExcodeExt.Properties.Resources.yellowButton;
+            this.updateToolStripButton.Image = global::ExcodeAuthor.Properties.Resources.yellowButton;
             this.updateToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.updateToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.updateToolStripButton.Name = "updateToolStripButton";

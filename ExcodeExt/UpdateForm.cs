@@ -10,7 +10,7 @@ using System.Drawing.Drawing2D;
 using System.Threading;
 using System.Deployment.Application;
 
-namespace ExcodeExt
+namespace ExcodeAuthor
 {
     public partial class UpdateForm : Form
     {

@@ -8,7 +8,7 @@
     <ProjectGuid>{26142C70-448D-485E-B767-589C6AE2373B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExcodeExt</RootNamespace>
+    <RootNamespace>ExcodeAuthor</RootNamespace>
     <AssemblyName>Excode Author</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

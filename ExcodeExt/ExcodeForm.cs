@@ -10,7 +10,7 @@ using System.IO;
 using System.Drawing.Drawing2D;
 using System.Text.RegularExpressions;
 
-namespace ExcodeExt
+namespace ExcodeAuthor
 {
     public partial class ExcodeForm : Form
     {
@@ -420,7 +420,7 @@ namespace ExcodeExt
         private void copyScript_Click(object sender, EventArgs e) {
             string filename = copyScriptName.Text;
             if (filename.Length == 0 || filename.Contains(' ') || filename.Contains('/') || filename.Contains(':') || filename.Contains(';') || filename == "root") {
-                MessageBox.Show("The filename must be at least one character long, and must not contain spaces, slashes, colons, or semicolons, and cannot by 'root'.");
+                MessageBox.Show("The filename must be at least one character long, and must not contain spaces, slashes, colons, or semicolons, and cannot be 'root'.");
                 return;
             }
             //string[][] lines = SplitCommands();
@@ -464,7 +464,7 @@ namespace ExcodeExt
 
 
         private IEnumerable<string> GetRecentFiles() {
-            var sr = new StringReader(ExcodeExt.Properties.Settings.Default.Recent);
+            var sr = new StringReader(ExcodeAuthor.Properties.Settings.Default.Recent);
             string line = sr.ReadLine();
             while (line != null && line.Length > 0) {
                 yield return line;
@@ -542,8 +542,8 @@ namespace ExcodeExt
                 openFileToolStripSplitButton.DropDownItems.Add(menu);
                 recentFileMenuItems.Add(menu);
             }
-            ExcodeExt.Properties.Settings.Default.Recent = sb.ToString();
-            ExcodeExt.Properties.Settings.Default.Save();
+            ExcodeAuthor.Properties.Settings.Default.Recent = sb.ToString();
+            ExcodeAuthor.Properties.Settings.Default.Save();
         }
 
         private void codeBox_SelectionChanged(object sender, EventArgs e) {

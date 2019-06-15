@@ -1,4 +1,4 @@
-﻿namespace ExcodeExt
+﻿namespace ExcodeAuthor
 {
     partial class UpdateForm
     {
