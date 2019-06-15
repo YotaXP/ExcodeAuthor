@@ -14,8 +14,8 @@
     <FileAlignment>512</FileAlignment>
     <ManifestCertificateThumbprint>ED3A9E5F77CFC96A5DCB4ED014376FF32BA94CBE</ManifestCertificateThumbprint>
     <ManifestKeyFile>ExcodeExt_1_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ApplicationIcon>ExcodeIcon.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -78,6 +78,12 @@
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -139,6 +145,7 @@
     </Compile>
     <None Include="app.config" />
     <None Include="ExcodeExt_1_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
